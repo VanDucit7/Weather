@@ -23,8 +23,14 @@ android {
 }
 
 dependencies {
+    def futures_version = "1.0.0-beta01"
+    def lifecycle_version = "2.0.0"
+    def paging_version = "2.1.0"
+    def room_version = "2.2.0-alpha01" // 2.1.0 for latest stable version
+    def work_version = "2.1.0"
+
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.0.2'
     implementation 'androidx.core:core-ktx:1.0.2'
     implementation 'com.google.android.material:material:1.0.0'
@@ -32,4 +38,30 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    // RxJava
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.11'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    // Concurrent
+//    implementation "androidx.concurrent:concurrent-futures:$futures_version"
+//    implementation "androidx.concurrent:concurrent-listenablefuture:$futures_version"
+//    implementation "androidx.concurrent:concurrent-listenablefuture-callback:$futures_version"
+    // Android KTX
+    implementation 'androidx.core:core-ktx:1.0.2'
+    // ViewModel and LiveData
+//    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
+//    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+//    implementation "androidx.lifecycle:lifecycle-reactivestreams:$lifecycle_version"
+//    testImplementation "androidx.arch.core:core-testing:$lifecycle_version"
+    // Paging
+//    implementation "androidx.paging:paging-runtime:$paging_version"
+//    testImplementation "androidx.paging:paging-common:$paging_version"
+//    implementation "androidx.paging:paging-rxjava2:$paging_version"
+    // Room
+//    implementation "androidx.room:room-runtime:$room_version"
+//    implementation "androidx.room:room-rxjava2:$room_version"
+//    annotationProcessor "androidx.room:room-compiler:$room_version"
+    // WorkManager
+//    implementation "androidx.work:work-runtime-ktx:$work_version"
+//    implementation "androidx.work:work-rxjava2:$work_version"
+//    androidTestImplementation "androidx.work:work-testing:$work_version"
 }
